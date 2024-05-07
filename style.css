@@ -518,17 +518,17 @@ img {
 
                                                                         /*=============== CONTACT ===============*/
 .contact {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
-  height:100vh;
+  grid-template-columns: 1fr;
+  height: 100vh;
+
 }
 
 .contact__info {
   flex: 1;
 }
-
-
 
 .contact__info ul {
   list-style: none;
@@ -545,6 +545,22 @@ img {
 
 .contact__video {
   flex: 1;
+}
+
+
+.contact__info {
+  margin-bottom: 200px;
+}
+
+.contact__info,
+.contact__video {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .contact {
+      grid-template-columns: 1fr 1fr;
+  }
 }
 
 
