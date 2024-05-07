@@ -430,19 +430,18 @@ body.dark-theme {
 
 
                                                                   /*================GALERIA===============*/
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
   padding: 10px;
-  height: 100vh;
   margin-top: 45px;
 }
 
@@ -454,7 +453,32 @@ img {
 
 .gallery img:hover {
   transform: scale(1.05);
-}                  
+}
+
+
+@media (max-width: 767px) {
+  .gallery {
+    margin-top: 20px; 
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    display: flex;
+    flex-wrap: wrap; 
+  }
+
+  .contact__info {
+    flex: 0 0 calc(50% - 10px);
+    margin-right: 20px; 
+    margin-bottom: 20px; 
+  }
+
+  .contact__video {
+    flex: 0 0 calc(50% - 10px); 
+  }
+}
+
 
 
                                                                   /*=============== BUTTONS ===============*/
