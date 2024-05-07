@@ -518,49 +518,34 @@ img {
 
                                                                         /*=============== CONTACT ===============*/
 .contact {
-  display: grid;
-  justify-content: space-between;
-  align-items: center;
-  grid-template-columns: 1fr;
-  height: 100vh;
-
-}
-
-.contact__info {
-  flex: 1;
-}
-
-.contact__info ul {
-  list-style: none;
-  padding: 0;
-}
-
-.contact__info li {
-  margin-bottom: 10px;
-}
-
-.contact__info i {
-  margin-right: 10px;
-}
-
-.contact__video {
-  flex: 1;
-}
-
-
-.contact__info {
-  margin-bottom: 200px;
+    display: flex;
+    flex-direction: column; /* Układ w kolumnie */
 }
 
 .contact__info,
 .contact__video {
-  width: 100%;
+    width: 100%;
+}
+
+.contact__info {
+    margin-bottom: 20px; /* Dodatkowy margines na dole sekcji "Kontakt" */
 }
 
 @media (min-width: 768px) {
-  .contact {
-      grid-template-columns: 1fr 1fr;
-  }
+    .contact {
+        flex-direction: row; /* Układ w rzędzie na większych ekranach */
+        align-items: start; /* Wyrównanie do góry */
+    }
+
+    .contact__info,
+    .contact__video {
+        flex: 1; /* Dzielenie dostępnej przestrzeni */
+    }
+
+    .contact__info {
+        margin-bottom: 0; /* Usunięcie marginesu na dole dla większych ekranów */
+        margin-right: 20px; /* Dodatkowy margines na prawo dla sekcji "Kontakt" */
+    }
 }
 
 
