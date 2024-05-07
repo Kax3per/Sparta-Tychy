@@ -243,6 +243,7 @@ body.dark-theme {
                                                             /*=============== STRONA GŁÓWNA ===============*/
 .home__container {
   row-gap: 3rem;
+  margin-top: 100px; 
 }
 
 .home__title {
@@ -266,14 +267,27 @@ body.dark-theme {
       display: none;
   }
 
-  .home__container {
-  height: 100vh;
-
+.home__container {
+  margin-bottom: 200px;
+  margin-top: 50px;
 }
 
-  .home__data {
-    margin-top: 10px;
+.home__title {
+ align-items: center;
 }
+
+.home__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home__description {
+  display: flex;
+  justify-content: center;
+}
+
 }
 
 @media (min-width: 1025px) {
@@ -361,7 +375,7 @@ body.dark-theme {
   justify-content: center;
   flex-wrap: wrap;
   height: auto;
-
+  margin-bottom: 90px;
 }
 
 .pricing__card {
@@ -458,9 +472,7 @@ img {
   background-color: var(--first-color-alt);
 }
 
-.button__header {
-  display: none;
-}
+
 
 .button-link {
   background: none;
@@ -489,7 +501,7 @@ img {
 .icons{
   text-decoration: none;
   font-size: 45px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .icons:hover{
@@ -505,28 +517,37 @@ img {
 
 
                                                                         /*=============== CONTACT ===============*/
-.contact__container {
-  padding-bottom: 3rem;
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
 }
 
-.contact__description {
-  text-align: center;
+.contact__info {
+  flex: 1;
 }
 
-.contact__content {
-  row-gap: .75rem;
+
+
+.contact__info ul {
+  list-style: none;
+  padding: 0;
 }
 
-.contact__address {
-  font-size: var(--small-font-size);
-  font-weight: var(--font-semi-bold);
-  color: var(--title-color);
+.contact__info li {
+  margin-bottom: 10px;
 }
 
-.contact__information {
-  font-weight: initial;
-  color: var(--text-color);
+.contact__info i {
+  margin-right: 10px;
 }
+
+.contact__video {
+  flex: 1;
+}
+
+
 
 
                                                                         /*=============== SCROLL UP ===============*/
