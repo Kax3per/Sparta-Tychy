@@ -429,8 +429,7 @@ body.dark-theme {
 
 
 
-                                                                  /*================GALERIA===============*/
-
+                                                                        /*================ GALERIA ===============*/
 img {
   display: block;
   max-width: 100%;
@@ -443,6 +442,8 @@ img {
   grid-gap: 10px;
   padding: 10px;
   margin-top: 45px;
+  height: 100vh;
+
 }
 
 .gallery img {
@@ -455,30 +456,69 @@ img {
   transform: scale(1.05);
 }
 
-
+/* Responsywność */
 @media (max-width: 767px) {
   .gallery {
-    margin-top: 20px; 
+    margin-top: 20px; /* Zmniejszamy margines na mniejszych urządzeniach */
   }
 }
 
 @media (min-width: 768px) {
   .contact {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Rozwijamy flexbox na większych urządzeniach */
   }
 
   .contact__info {
-    flex: 0 0 calc(50% - 10px);
-    margin-right: 20px; 
-    margin-bottom: 20px; 
+    flex: 0 0 calc(50% - 10px); /* Połowa szerokości z marginesem */
+    margin-right: 20px; /* Margines między sekcjami */
+    margin-bottom: 20px; /* Margines na dole dla kontaktu */
   }
 
   .contact__video {
-    flex: 0 0 calc(50% - 10px); 
+    flex: 0 0 calc(50% - 10px); /* Połowa szerokości z marginesem */
   }
 }
 
+
+                                                                      /*=============== CONTACT ===============*/
+@media (max-width: 767px) {
+  .contact-info {
+      text-align: center;
+  }
+}
+
+/* Styl dla sekcji kontaktowej */
+.contact {
+  padding: 50p x 0;
+  height: 100vh;
+
+}
+
+/* Styl dla informacji kontaktowych */
+.contact-info {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Styl dla miejsca na filmik */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporcje 16:9 dla responsywności */
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+                                                                      
+                  
 
 
                                                                   /*=============== BUTTONS ===============*/
@@ -536,40 +576,6 @@ img {
 .icon{
   color: #EFA20A;
   font-size: 30px;
-}
-
-
-
-                                                                        /*=============== CONTACT ===============*/
-.contact {
-    display: flex;
-    flex-direction: column; /* Układ w kolumnie */
-}
-
-.contact__info,
-.contact__video {
-    width: 100%;
-}
-
-.contact__info {
-    margin-bottom: 20px; /* Dodatkowy margines na dole sekcji "Kontakt" */
-}
-
-@media (min-width: 768px) {
-    .contact {
-        flex-direction: row; /* Układ w rzędzie na większych ekranach */
-        align-items: start; /* Wyrównanie do góry */
-    }
-
-    .contact__info,
-    .contact__video {
-        flex: 1; /* Dzielenie dostępnej przestrzeni */
-    }
-
-    .contact__info {
-        margin-bottom: 0; /* Usunięcie marginesu na dole dla większych ekranów */
-        margin-right: 20px; /* Dodatkowy margines na prawo dla sekcji "Kontakt" */
-    }
 }
 
 
