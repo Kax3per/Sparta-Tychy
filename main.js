@@ -115,20 +115,44 @@ function showOriginalContent(cardNumber) {
 const overlay = document.getElementById('overlay');
         const closeBtn = document.getElementById('closeBtn');
         const expandedImg = document.getElementById('expandedImg');
+        const expandedVideo = document.getElementById('expandedVideo');
         const moreBtn = document.getElementById('moreBtn');
 
-        document.querySelectorAll('.item img').forEach(item => {
-            item.addEventListener('click', () => {
-                expandedImg.src = item.src;
-                overlay.style.display = 'flex';
-            });
-        });
+// Funkcja obsługująca kliknięcie na zdjęcie
+function handleImageClick(item) {
+    expandedImg.src = item.src;
+    overlay.style.display = 'flex';
+}
 
+// Funkcja obsługująca kliknięcie na wideo
+function handleVideoClick(item) {
+    const videoSource = item.querySelector('source').src;
+    expandedVideo.src = videoSource;
+    overlay.style.display = 'flex';
+    expandedVideo.style.display = 'block';
+
+}
+
+// Przypisanie funkcji do kliknięć dla zdjęć
+document.querySelectorAll('.item img').forEach(item => {
+    item.addEventListener('click', () => {
+        handleImageClick(item);
+    });
+});
+
+// Przypisanie funkcji do kliknięć dla filmów
+document.querySelectorAll('.item video').forEach(item => {
+    item.addEventListener('click', () => {
+        handleVideoClick(item);
+        expandedImg.style.display = 'none'
+
+    });
+});
+
+        
         closeBtn.addEventListener('click', () => {
             overlay.style.display = 'none';
         });
 
-        moreBtn.addEventListener('click', () => {
-            // Tutaj możesz dodać więcej zdjęć do galerii lub pokazać istniejące ukryte zdjęcia
-            // Na potrzeby przykładu, można dodać więcej elementów .item za pomocą JavaScript
-        });
+
+        
