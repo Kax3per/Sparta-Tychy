@@ -109,3 +109,36 @@ function showOriginalContent(cardNumber) {
     document.getElementById('originalContent' + cardNumber).style.display = 'block';
     document.getElementById('newContent' + cardNumber).style.display = 'none';
 }
+
+
+//GALERIA
+const items = document.querySelectorAll('.item');
+const moreBtn = document.getElementById('moreBtn');
+const numVisibleItems = 6; // Ilość widocznych elementów na początku
+let currentVisibleIndex = numVisibleItems;
+
+// Funkcja, która pokazuje lub ukrywa odpowiednią liczbę elementów
+function toggleVisibility() {
+    items.forEach((item, index) => {
+        if (index < currentVisibleIndex) {
+            item.classList.add('visible');
+        } else {
+            item.classList.remove('visible');
+        }
+    });
+
+    if (currentVisibleIndex < items.length) {
+        moreBtn.style.display = 'block';
+    } else {
+        moreBtn.style.display = 'none';
+    }
+}
+
+// Pokaż więcej elementów po kliknięciu przycisku "Więcej zdjęć"
+moreBtn.addEventListener('click', () => {
+    currentVisibleIndex += numVisibleItems;
+    toggleVisibility();
+});
+
+// Inicjalizacja widoczności elementów
+toggleVisibility();
