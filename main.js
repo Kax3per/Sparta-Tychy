@@ -112,33 +112,23 @@ function showOriginalContent(cardNumber) {
 
 
 //GALERIA
-const items = document.querySelectorAll('.item');
-const moreBtn = document.getElementById('moreBtn');
-const numVisibleItems = 6; // Ilość widocznych elementów na początku
-let currentVisibleIndex = numVisibleItems;
+const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+        const expandedImg = document.getElementById('expandedImg');
+        const moreBtn = document.getElementById('moreBtn');
 
-// Funkcja, która pokazuje lub ukrywa odpowiednią liczbę elementów
-function toggleVisibility() {
-    items.forEach((item, index) => {
-        if (index < currentVisibleIndex) {
-            item.classList.add('visible');
-        } else {
-            item.classList.remove('visible');
-        }
-    });
+        document.querySelectorAll('.item img').forEach(item => {
+            item.addEventListener('click', () => {
+                expandedImg.src = item.src;
+                overlay.style.display = 'flex';
+            });
+        });
 
-    if (currentVisibleIndex < items.length) {
-        moreBtn.style.display = 'block';
-    } else {
-        moreBtn.style.display = 'none';
-    }
-}
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
 
-// Pokaż więcej elementów po kliknięciu przycisku "Więcej zdjęć"
-moreBtn.addEventListener('click', () => {
-    currentVisibleIndex += numVisibleItems;
-    toggleVisibility();
-});
-
-// Inicjalizacja widoczności elementów
-toggleVisibility();
+        moreBtn.addEventListener('click', () => {
+            // Tutaj możesz dodać więcej zdjęć do galerii lub pokazać istniejące ukryte zdjęcia
+            // Na potrzeby przykładu, można dodać więcej elementów .item za pomocą JavaScript
+        });
