@@ -407,27 +407,6 @@ body.dark-theme {
 }
 
 /* Dla telefonów */
-@media screen and (max-width: 576px) {
-  .services__data {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .services__subtitle {
-      font-size: 20px; /* Zmniejsz rozmiar czcionki dla tytułów */
-  }
-
-  .services__description {
-      font-size: 14px; /* Zmniejsz rozmiar czcionki dla opisów */
-  }
-
-  .terminy {
-      font-size: 14px; /* Zmniejsz rozmiar czcionki dla terminów */
-  }
-}
 
                                                                 /*=============== CENNIK ===============*/
 
