@@ -18,47 +18,50 @@
     </head>
     <body>
         <!--=============== HEADER ===============-->
+
         <header class="header" id="header">
             <div class="progress-container">
-                <div class="progress-bar" id="myBar"></div>
-              </div>  
+              <div class="progress-bar" id="myBar"></div>
+            </div>  
             <nav class="nav container">
-                <a href="#" class="nav__logo"><img src="Images/Logo_sparta.jpg" class="logo"></a>
+              <div class="nav__logo">
+                <img src="Images/Logo_sparta.jpg" class="logo">
+              </div>
+          
+              <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="#StronaGlowna" class="nav__link active-link">Strona główna</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#treningi" class="nav__link">Trening</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#cennik" class="nav__link">Cennik</a>
+                  </li>
+                  <li class="nav__item">
+                    <a href="#kontakt" class="nav__link">Kontakt</a>
+                  </li>
+                  <li>
+                    <a href="navbars.html" class="button button__header">Sklep</a>
+                    </li>
+                    <i class='bx bx-toggle-left change-theme' id="theme-button"  style="font-size:2.3rem ;" ></i>
+                  </li>
+         
+                </ul>
+              </div>
+          
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#StronaGlowna" class="nav__link active-link">Strona główna</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#treningi" class="nav__link">Treninig</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#cennik" class="nav__link">Cennik</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#galeria" class="nav__link">Galeria</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#kontakt" class="nav__link">Kontakt</a>
-                        </li>
-                        <a href="navbars.html" class="button button__header">Skelp</a>
-                        <i class='bx bx-toggle-left change-theme' id="theme-button"  style="font-size:2.3rem ;" ></i>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-
-               
+              <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+              </div>
             </nav>
-        </header>
+          </header>
 
         <main class="main">
             <!--=============== STRONA GŁÓWNA ===============-->
             <section class="home section" id="StronaGlowna">
-                <div class="home__container container grid">
+                <div class="home__container container">
                     <video autoplay loop muted height="600px" class="video desktop-only">
                         <source src="Images/Sparta_video.mp4">
                     </video>
@@ -74,9 +77,9 @@
                 </div>
             </section>
             
-            
-            
 
+
+                
             <!--=============== TRENINGI ===============-->
             <section class="services section container" id="treningi">
                 <div class="services__container grid">
@@ -452,69 +455,42 @@
                         </div>
                     </div>
        </section>     
-            <!--==============GALERIA================-->
-            <section class="section" id="galeria">
-                <div class="gallery">
-                    <div class="item">
-                        <img src="Images/sparta_1.jpg" alt="Image 1">
-                       <!----  <div class="caption">
-                          <h3>Beautiful Landscape</h3>
-                            <p>Lorem ipsum dolor sit amet</p>
-                        </div>-->
-                    </div>
-                    <div class="item">
-                        <img src="Images/sparta_2.jpg" alt="Image 1">
-                    </div> 
-                     <div class="item">
-                        <img src="Images/sparta_3.jpg" alt="Image 1">
-                    </div> 
-                    <div class="item">
-                        <img src="Images/sparta_4.jpg" alt="Image 1">
-                    </div>
-                     <div class="item">
-                        <video autoplay loop muted>
-                            <source src="Images/galeria_viedo1.mp4">
-                        </video>
-                    </div>
-                      <div class="item">
-                        <video autoplay loop muted >
-                            <source src="Images/galeria_video2.mp4">
-                        </video>
-                    </div>
-                    <div class="item">
-                        <video autoplay loop muted >
-                            <source src="Images/galeria_video3.mp4">
-                        </video>
-                    </div>
-                    <div class="item">
-                        <video autoplay loop muted >
-                            <source src="Images/galeria_video4.mp4">
-                        </video>
-                    </div>
-                    <div class="item">
-                        <img src="Images/sparta_5.jpg" alt="Image 1">
-                    </div>
-                    <div class="item">
-                        <img src="Images/sparta_6.jpg" alt="Image 1">
-                    </div>
-                    <div class="item">
-                        <img src="Images/sparta_7.jpg" alt="Image 1">
-                    </div>
-                    <div class="item">
-                        <img src="Images/sparta_8.jpg" alt="Image 1">
-                    </div>
-                </div>
-                <div class="overlay" id="overlay">
-                    <button class="close-btn" id="closeBtn">&times;</button>
-                    <img  id="expandedImg">
-                    <video autoplay loop muted id="expandedVideo">
-                        <source src="" >
-                    </video>
-                </div>  
-                
+
             <!--===============KONTAKT===============-->
             <section class="about section container" id="kontakt">
-            
+                <div class="kontakt">
+                    <video autoplay loop muted class="kontaktVideo ">
+                        <source src="Images/sparta_kontakt.mp4">
+                    </video>
+
+                            <div class="services__dataKontakt">
+                                <div class="content" id="originalContent1">
+                                    <p class="services__description1"><a href="tel:+48603862996" class="iconskontakt" target="_blank"><i class='bx bx-phone icons'></i>603 862 996</a></p>
+                                    <p class="services__description1"><a href="https://maps.app.goo.gl/wh5mBpX2sxGi1vsN6" class="iconskontakt" target="_blank" ><i class='bx bx-current-location icons'></i>al. Piłsudskiego 8</a></p>
+                                    <p class="godziny"><h2>GODZINY OTWARCIA</h2>poniedziałek
+                                        06:00 - 21:00<br>
+                                        wtorek
+                                        06:00 - 21:00<br>
+                                        środa
+                                        06:00 - 21:00<br>
+                                        czwartek
+                                        06:00 - 21:00<br>
+                                        Piątek
+                                        06:00 - 21:00<br>
+                                        sobota
+                                        09:00 - 20:00<br>
+                                        niedziela
+                                        09:00 - 20:00</p>
+
+                        <i class=' icons' ></i>
+                        <p class="services__description1"><a ></a></p>
+                       <p>PO WIĘCEJ INFORMACJI ZPARASZAMY NA <br>SOCIAL MEDIA</p>
+                       <a href="#StronaGlowna" class="buttonk"><i class='bx bx-search icons'></i></a>
+                                    
+
+                                </div>
+                            </div>
+                    </div>
             </section>
             
         </main>

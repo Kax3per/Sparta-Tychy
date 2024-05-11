@@ -137,7 +137,7 @@ body.dark-theme {
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 968px;
+  max-width: 800px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -154,8 +154,11 @@ body.dark-theme {
   position: fixed;
   top: 0;
   left: 0;
+
   z-index: var(--z-fixed);
   transition: .5s;
+  justify-content: center;
+
 }
 
 .logo{
@@ -173,8 +176,19 @@ body.dark-theme {
 .nav {
   height: var(--header-height);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+.nav__logo {
+  margin-right: auto;
+}
+
+.button__header {
+  margin-left: auto;
+}
+
+.nav__menu {
+  margin-right: 1rem; /* Dodatkowy margines między logo a menu */
 }
 
 @media screen and (max-width: 767px) {
@@ -193,6 +207,7 @@ body.dark-theme {
     z-index: var(--z-fixed);
   }
 
+  
   .logo{
     height: 30px;
     width: 30px;
@@ -247,7 +262,7 @@ body.dark-theme {
 
                                                             /*=============== STRONA GŁÓWNA ===============*/
 .home__container {
-  margin-top: 100px; 
+  margin-top: 20px; 
 }
 
 .home__title {
@@ -308,6 +323,20 @@ body.dark-theme {
   align-items: center;
 }
 
+@media screen and (max-width: 576px) {
+    .home__data {
+        text-align: center;
+        margin-top: 50px; /* Adjust this value as needed */
+    }
+
+    .home__title {
+        font-size: 24px; /* Adjust font size as needed */
+    }
+
+    .home__description {
+        margin-top: 20px; /* Adjust this value as needed */
+    }
+}
 
 
                                                         /*=============== TRENINGI ===============*/
@@ -317,7 +346,7 @@ body.dark-theme {
 
 .services__data {
   display: grid;
-  row-gap: 0.5rem;
+  row-gap: 1.5rem;
   background-color: var(--container-color);
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.07);
   border-bottom: 5px solid transparent;
@@ -362,6 +391,8 @@ body.dark-theme {
   .services__data {
       display: flex;
       flex-direction: column;
+      height: 400px;
+      width: 300px;
       align-items: center;
   }
 
@@ -372,6 +403,28 @@ body.dark-theme {
 
   .button-container {
       margin-top: 10px;
+  }
+}
+
+/* Dla telefonów */
+@media screen and (max-width: 576px) {
+  .services__data {
+      text-align: center;
+      justify-content: center;
+      margin-bottom: 20px; /* Dodaj odpowiedni margines na dole */
+      margin-left: 70px;
+  }
+
+  .services__subtitle {
+      font-size: 20px; /* Zmniejsz rozmiar czcionki dla tytułów */
+  }
+
+  .services__description {
+      font-size: 14px; /* Zmniejsz rozmiar czcionki dla opisów */
+  }
+
+  .terminy {
+      font-size: 14px; /* Zmniejsz rozmiar czcionki dla terminów */
   }
 }
 
@@ -595,128 +648,106 @@ header .slider {
   }
 }
 
-/*===============================GALERIA==============================*/
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.item {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-
-.item:hover {
-  transform: scale(1.03);
-}
-
-
-.item img {
-  width: 100%;
-  height: auto;
-  border-radius: inherit; 
-  cursor: pointer;
-}
-
-.item video {
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
-  border-radius: inherit; 
-  cursor: pointer;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.overlay img {
-  max-width: 100%;
-  max-height: 90%;
-  border-radius: 10px;
-}
-
-.overlay video {
-  max-width: 100%;
-  max-height: 90%;
-  border-radius: 10px;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 50px;
-  color: #fff;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-@media (max-width: 767px) {
-  .item1 video {
-    height: 570px; /* Ustawiamy auto dla wysokości, aby zachować proporcje */
-  }
-  .item img {
-    height: 300px; /* Ustawiamy auto dla wysokości, aby zachować proporcje */
-  }
-}
-
-                   
-                 /*=============== CONTACT ===============*/
+          /*=============== KONTAKT ===============*/
                                                                      
-/* Styl dla wyśrodkowania tekstu na telefonach */
-@media (max-width: 767px) {
-    .contact-info {
-        text-align: center;
-    }
+.kontakt{
+  height: 100vh;
+  flex-direction: column;
+}                 
+
+.kontaktVideo{
+  height: 600px;
+  width: 400px;
+  float: right;
 }
 
-/* Styl dla sekcji kontaktowej */
-.contact {
-    padding: 50px 0;
+.home__title1{
+  font-size: 50px;
+  margin-bottom: 50px;
 }
 
-/* Styl dla informacji kontaktowych */
-.contact-info {
-    font-size: 18px;
-    line-height: 1.6;
+.kontaktcontent{
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
 }
 
-/* Styl dla miejsca na filmik */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Proporcje 16:9 dla responsywności */
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+.godziny{
+  font-size:30px;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.buttonk {
+  display: inline-block;
+  background-color: var(--yellow-color);
+  color: white;
+  padding: .75rem 1.5rem;
+  border-radius: 3rem;
+  font-weight: var(--font-semi-bold);
+  transition: .3s;
+  height: 50px;
+  width: 50px;
+  margin-left: 45%;
+  margin-top: 20px;
 }
-                                                                                                                                   
-                  
+
+.buttonk:hover {
+  background-color: var(--first-color-alt);
+}
+
+.services__dataKontakt {
+  display: grid;
+
+  background-color: var(--container-color);
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.07);
+  border-bottom: 5px solid transparent;
+  transition: all 0.3s ease-out;
+  border-radius: 7px;
+  text-align: center;
+  height: 600px;
+  position: relative; 
+}
+
+.services__description1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.services__dataKontakt:hover {
+  transform: scale(1.04);
+  border-bottom: 5px solid #EFA20A ;
+}
+
+.iconskontakt{
+  font-family: var( --body-font);
+  text-decoration: none;
+  font-size: 30px;
+  color: var(--body-font);
+}
+
+/* Dla telefonów */
+@media screen and (max-width: 576px) {
+  .kontaktVideo {
+    display: none;
+  }
+}
+
+/* Dla telefonów */
+@media screen and (max-width: 576px) {
+  .services__dataKontakt {
+      padding: 10px; /* Zmniejsz wewnętrzne marginesy sekcji */
+  }
+
+  .services__description1 {
+      font-size: 14px; /* Zmniejsz rozmiar czcionki dla opisów */
+  }
+}
+
 
 
                                                                   /*=============== BUTTONS ===============*/
