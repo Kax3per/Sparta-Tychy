@@ -433,7 +433,7 @@ body.dark-theme {
 /* Dla telefonów o bardzo małych szerokościach */
 @media screen and (max-width: 320px) {
   .services__data {
-
+    margin-bottom: 30px;
     justify-content: center;
     align-items: center;
   }
