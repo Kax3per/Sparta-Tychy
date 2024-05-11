@@ -433,7 +433,7 @@ body.dark-theme {
 /* Dla telefonów o bardzo małych szerokościach */
 @media screen and (max-width: 320px) {
   .services__data {
-    margin-left: 30px;
+    margin-bottom: 30px;
     justify-content: center;
     align-items: center;
   }
@@ -447,6 +447,7 @@ body.dark-theme {
   width: 400px;
   background:var(--body-color);
   padding: 30px;
+  margin-bottom: 80px;
   border-radius: 16px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
 
@@ -688,8 +689,8 @@ header .slider {
 
 .godziny{
   font-size:30px;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+
 }
 
 .buttonk {
