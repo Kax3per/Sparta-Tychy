@@ -409,10 +409,11 @@ body.dark-theme {
 /* Dla telefonów */
 @media screen and (max-width: 576px) {
   .services__data {
-      text-align: center;
-      justify-content: center;
-      margin-bottom: 20px; /* Dodaj odpowiedni margines na dole */
-      margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   .services__subtitle {
